@@ -1,4 +1,4 @@
-module github.com/hadvand/vendingmachine.dev
+module github.com/hadvand/hadvand.github.io
 
 go 1.25.5
 
