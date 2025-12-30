@@ -1,0 +1,8 @@
+{{- $href := (.Get "href") | default (.Get 0) -}}
+{{- $class := (.Get "class") | default "btn" -}}
+
+<div class="text-center">
+  <a class="{{ $class }}" href="{{ $href }}">
+    {{ .Inner }}
+  </a>
+</div>

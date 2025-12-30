@@ -16,7 +16,7 @@ pygmentsCodefencesGuessSyntax = true
   [Services.Disqus]
     # Shortname = "XXX"
   [Services.googleAnalytics]
-    # id = "XXX"
+    id = "G-5Q1VYVSMT8"
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
@@ -64,14 +64,17 @@ pygmentsCodefencesGuessSyntax = true
 [[menu.main]]
     name = "Projects"
     url = "projects"
-    weight = 3
+    weight = 2
 
 [[menu.main]]
     name = "Experience"
     url = "experience"
-    weight = 3
+    weight = 1
 
 [[menu.main]]
     name = "Blog"
     url = "blog"
     weight = 3
+
+[markup.goldmark.renderer]
+    unsafe = true

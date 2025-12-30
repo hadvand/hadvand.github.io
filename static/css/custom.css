@@ -1,0 +1,23 @@
+.btn-cv {
+  margin: 16px;
+  background-color: #404040;
+  color: #f0f0f0;
+  font: inherit;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.btn-cv:hover {
+  transform: translateY(-3px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn-cv {
+    background-color: #f0f0f0;
+    color: #404040;
+  }
+
+  .btn-cv:hover {
+    background-color: #dcdcdc;
+  }
+}

@@ -1,17 +1,17 @@
 # hi there!
 In my 2 years of experience in software engineering I have tried many things:
 - full-stack development
-- kubernetes management
-- data processing
-- machine learning
-- architecture design
+- kubernetes infra
+- data processing & ML
 
-I will not dare to say that I am a specialist in any of these fields, but man does it feel good learning new stuff :D
+Most of my time went into web development, and I will not dare to say that I am a specialist in any of these fields, but man does it feel good learning new stuff :D
 
-I studied for my bachelor's degree in CompSci at Brno Technical University, then tried myself at a few real projects and currently am working for Solarwinds in Kubernetes Observability team.
+I studied for my bachelor's degree in CompSci at Brno Technical University, then tried myself at a few real projects and currently am working for Solarwinds in Kubernetes Observability team
 
-Also having some projects on the side, visiting conferences and hackathons, and trying myself in contributing to open-source.
+{{<button class="btn btn-cv" href="https://drive.google.com/file/d/1wIIbALNnYy8nl9aifG2HmLV-N_m5wKXL/view?usp=sharing">}}
+    Check out my CV
+{{</button >}}
 
-In my free time you can also find me reaching new *heights* at my local climbing gym, wrestling or watching some old tv-show that I've already seen 5 times.
+Also having some projects on the side, visiting conferences and hackathons, and trying myself in contributing to open-source
 
-Reach out to me if you have any questions or a cool project idea! You can find my socials down below.
+Outside of work, I’m either climbing, wrestling, or rewatching an old favorite TV show for the 5th time
