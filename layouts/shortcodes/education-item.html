@@ -5,9 +5,13 @@
 
 <div class="education-item">
   <div class="education-content">
-    <h4 class="education-school">{{ $school }}</h4>
-    <span class="education-degree">{{ $degree }}</span>
-    <span class="timeline-date">{{ $date }}</span>
+    <div class="education-header">
+      <div class="education-title-section">
+        <h4 class="education-school">{{ $school }}</h4>
+        <span class="education-degree">{{ $degree }}</span>
+      </div>
+      <span class="education-date">{{ $date }}</span>
+    </div>
     {{ if $thesis }}<p class="education-thesis">{{ $thesis }}</p>{{ end }}
   </div>
 </div>
