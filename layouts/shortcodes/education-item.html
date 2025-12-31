@@ -1,0 +1,13 @@
+{{ $school := .Get "school" }}
+{{ $degree := .Get "degree" }}
+{{ $date := .Get "date" }}
+{{ $thesis := .Get "thesis" }}
+
+<div class="education-item">
+  <div class="education-content">
+    <h4 class="education-school">{{ $school }}</h4>
+    <span class="education-degree">{{ $degree }}</span>
+    <span class="education-date">{{ $date }}</span>
+    {{ if $thesis }}<p class="education-thesis">📝 {{ $thesis }}</p>{{ end }}
+  </div>
+</div>

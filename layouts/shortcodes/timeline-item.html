@@ -1,0 +1,25 @@
+{{ $title := .Get "title" }}
+{{ $company := .Get "company" }}
+{{ $date := .Get "date" }}
+{{ $location := .Get "location" }}
+{{ $link := .Get "link" }}
+
+<div class="timeline-item">
+  <div class="timeline-content">
+    <div class="timeline-header">
+      <div class="timeline-title-section">
+        <h3 class="timeline-title">
+          {{ if $link }}<a href="{{ $link }}" target="_blank" rel="noopener">{{ $company }}</a>{{ else }}{{ $company }}{{ end }}
+        </h3>
+        <span class="timeline-role">{{ $title }}</span>
+      </div>
+      <div class="timeline-meta">
+        <span class="timeline-date">{{ $date }}</span>
+        <span class="timeline-location">📍 {{ $location }}</span>
+      </div>
+    </div>
+    <div class="timeline-body">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+</div>

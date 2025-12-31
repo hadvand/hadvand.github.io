@@ -1,3 +1,14 @@
+:root {
+  --accent: #0077b6;
+  --accent-2: #00b4d8;
+  --ink: #1a1a2e;
+  --muted: #555;
+  --subtle: #777;
+  --panel: #ffffff;
+  --border: #e6e6e6;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 .btn-cv {
   margin: 16px;
   background-color: #404040;
@@ -5,13 +16,307 @@
   font: inherit;
   padding: 10px 20px;
   border-radius: 10px;
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 .btn-cv:hover {
   transform: translateY(-3px);
 }
 
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding-left: 48px;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
+  border-radius: 3px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .timeline-item {
+    opacity: 0;
+    transform: translateX(-16px);
+    animation: slideIn 0.6s ease forwards;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -32px;
+  top: 4px;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.08);
+}
+
+.timeline-content {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-title-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.timeline-title {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.timeline-title a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.timeline-title a:hover {
+  color: var(--accent-2);
+}
+
+.timeline-role {
+  display: block;
+  font-size: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.timeline-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  text-align: right;
+}
+
+.timeline-date {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(0, 119, 182, 0.08);
+  padding: 0.2rem 0.7rem;
+  border-radius: 16px;
+}
+
+.timeline-location {
+  font-size: 0.95rem;
+  color: var(--subtle);
+}
+
+.timeline-body {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.timeline-body ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.timeline-body li {
+  margin-bottom: 0.4rem;
+}
+
+.timeline-body li::marker {
+  color: var(--accent);
+}
+
+.timeline-body strong {
+  color: var(--ink);
+}
+
+.education-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.education-item {
+  display: flex;
+  gap: 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .education-item {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.education-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.education-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-school {
+  margin: 0 0 0.15rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.education-degree {
+  display: block;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.education-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.education-thesis {
+  margin: 0.6rem 0 0 0;
+  font-size: 0.95rem;
+  color: var(--subtle);
+  font-style: italic;
+}
+
+.cv-download {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.cv-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  background: linear-gradient(135deg, #006da8, #0099c4);
+}
+
+.cv-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 3rem 0 1.25rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+
+.section-icon {
+  font-size: 1.5rem;
+}
+
 @media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e0e0e0;
+    --muted: #aaa;
+    --subtle: #999;
+    --panel: #1e1e2e;
+    --border: #333;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  }
+
   .btn-cv {
     background-color: #f0f0f0;
     color: #404040;
@@ -19,5 +324,34 @@
 
   .btn-cv:hover {
     background-color: #dcdcdc;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-container {
+    padding-left: 32px;
+  }
+
+  .timeline-container::before {
+    left: 8px;
+  }
+
+  .timeline-marker {
+    left: -22px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+  }
+
+  .timeline-meta {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .timeline-content {
+    padding: 1rem;
   }
 }
