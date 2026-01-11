@@ -1,1 +1,1 @@
-# https://ventingmachine.dev/
+# ventingmachine.dev
