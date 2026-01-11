@@ -3,7 +3,6 @@
   --accent: #424242;
   --accent-2: #6972d1;
   --muted: #555;
-  --subtle: #777;
   --panel: #f5f5f5;
   --border: #e3e3e3;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -21,7 +20,8 @@
   margin: 16px;
   background-color: var(--background);
   color: var(--btn-text);
-  font: inherit;
+  font-weight: bold;
+  font-size: 1.8rem;
   padding: 10px 20px;
   border-radius: 10px;
   display: inline-block;
@@ -143,7 +143,7 @@
 
 .timeline-location {
   font-size: 1.1rem;
-  color: var(--subtle);
+  color: var(--muted);
 }
 
 
@@ -256,7 +256,7 @@
 .education-thesis {
   margin: 0.6rem 0 0 0;
   font-size: 1.3rem;
-  color: var(--subtle);
+  color: var(--muted);
   font-style: italic;
 }
 
@@ -273,8 +273,7 @@
   :root {
     --accent: #ffffff;
     --accent-2: #b0b0b0;
-    --muted: #aaa;
-    --subtle: #999;
+    --muted: #c6c6c6;
     --panel: #444444;
     --border: #e3e3e3;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.35);

@@ -5,7 +5,7 @@ comments: false
 ---
 
 {{<button class="btn btn-cv" href="https://drive.google.com/file/d/1wIIbALNnYy8nl9aifG2HmLV-N_m5wKXL/view?usp=sharing">}}
-    Download CV
+    See my CV
 {{</button >}}
 
 <div class="section-header">
