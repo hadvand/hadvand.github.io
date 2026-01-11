@@ -2,7 +2,7 @@
 {{- $class := (.Get "class") | default "btn" -}}
 
 <div class="text-center">
-  <a class="{{ $class }}" href="{{ $href }}">
+  <a class="{{ $class }}" target="_blank" rel="noopener" href="{{ $href }}">
     {{ .Inner }}
   </a>
 </div>
