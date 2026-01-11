@@ -8,7 +8,7 @@ I will not dare to say that I am a specialist in any of these fields, but man do
 
 I studied for my bachelor's degree in CompSci at Brno Technical University, then tried myself at a few real projects and currently am working for Solarwinds in Kubernetes Observability team
 
-{{<button class="btn btn-cv" href="https://drive.google.com/file/d/1wIIbALNnYy8nl9aifG2HmLV-N_m5wKXL/view?usp=sharing">}}
+{{<button class="btn btn-cv" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1wIIbALNnYy8nl9aifG2HmLV-N_m5wKXL/view?usp=sharing">}}
     See my CV
 {{</button >}}
 
