@@ -9,13 +9,21 @@
     <div class="timeline-header">
       <div class="timeline-title-section">
         <h3 class="timeline-title">
-          {{ if $link }}<a href="{{ $link }}" target="_blank" rel="noopener">{{ $company }}</a>{{ else }}{{ $company }}{{ end }}
+          {{ if $link }}
+            <a href="{{ $link }}" 
+              class="external-link" 
+              data-company="{{ lower $company }}">
+              {{ $company }}
+            </a>
+          {{ else }}
+            {{ $company }}
+          {{ end }}
         </h3>
         <span class="timeline-role">{{ $title }}</span>
       </div>
       <div class="timeline-meta">
         <span class="timeline-date">{{ $date }}</span>
-        <span class="timeline-location">📍 {{ $location }}</span>
+        <span class="timeline-location">{{ $location }}</span>
       </div>
     </div>
     <div class="timeline-body">
